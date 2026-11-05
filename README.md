@@ -1,4 +1,4 @@
-# Telecom churn prediction (Assignment 3: Results)
+# Telecom churn prediction 
 
 Code for the churn article, run on the Cell2Cell and Orange Telecom datasets.
 The notebook compares six classifiers with basic vs. enhanced preprocessing and
