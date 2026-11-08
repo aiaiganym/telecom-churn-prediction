@@ -9,13 +9,17 @@ with/without SMOTE-NC, then runs SHAP on the best tree model for each dataset.
 The datasets are not in this repo, so download them from Kaggle and put the
 files in `data/`:
 
-- Cell2Cell: https://www.kaggle.com/datasets/jpacse/datasets-for-churn-telecom
+- Cell2Cell: https://www.kaggle.com/code/ngclongon/cell2cell/input
   (`cell2celltrain.csv.zip`)
 - Orange Telecom: https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset
   (`bigml_59c28831336c6604c800002a.csv`)
 
-Note: the Cell2Cell archive I downloaded only had the labelled file. The
-unlabelled holdout file mentioned in the Methods was not in it.
+Note: the Cell2Cell archive I downloaded only had the labelled file.
+No unlabelled holdout file was included or used.
+
+Dataset licences were not verified. Both datasets are on Kaggle and subject to
+Kaggle's Terms of Use (https://www.kaggle.com/terms). Check the dataset pages
+and those terms before reuse.
 
 ## Running it
 
@@ -40,4 +44,10 @@ Cell2Cell, 18 on Orange), not counting bootstrap, tests and SHAP.
 
 ## Output
 
-Tables are saved to `tables/` (CSV and LaTeX), figures to `figures/` (PDF and SVG).
+The generated tables (CSV and LaTeX) and figures (PDF and SVG) are archived as
+`tables-20261025T133027Z-1-001.zip` and `figures-20261025T133026Z-1-001.zip`.
+Unzip them to get the `tables/` and `figures/` folders.
+
+## Licence
+
+The code is released under the MIT License (see `LICENSE`).
