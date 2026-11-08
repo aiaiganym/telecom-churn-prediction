@@ -4,18 +4,17 @@ Code for the churn article, run on the Cell2Cell and Orange Telecom datasets.
 The notebook compares six classifiers with basic vs. enhanced preprocessing and
 with/without SMOTE-NC, then runs SHAP on the best tree model for each dataset.
 
-## Getting the data
+## Data
 
-The datasets are not in this repo, so download them from Kaggle and put the
-files in `data/`:
+The two dataset files used in the study are in the repository root:
 
-- Cell2Cell: https://www.kaggle.com/code/ngclongon/cell2cell/input
-  (`cell2celltrain.csv.zip`)
-- Orange Telecom: https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset
-  (`bigml_59c28831336c6604c800002a.csv`)
+- Cell2Cell: `cell2celltrain.csv.zip`, downloaded from
+  https://www.kaggle.com/code/ngclongon/cell2cell/input
+- Orange Telecom: `bigml_59c28831336c6604c800002a.csv`, from
+  https://www.kaggle.com/datasets/becksddf/churn-in-telecoms-dataset
 
-Note: the Cell2Cell archive I downloaded only had the labelled file.
-No unlabelled holdout file was included or used.
+The Cell2Cell archive contains only the labelled file. No unlabelled holdout
+file was included or used.
 
 Dataset licences were not verified. Both datasets are on Kaggle and subject to
 Kaggle's Terms of Use (https://www.kaggle.com/terms). Check the dataset pages
@@ -23,10 +22,18 @@ and those terms before reuse.
 
 ## Running it
 
-Install `requirements.txt` (Python 3.13.16), open the notebook in Colab on a
-CPU runtime and run the cells from top to bottom. Tuning results are cached in
-`objects/`. With the cache the notebook finishes quickly; delete the folder to
-redo the searches, which takes about 5 hours.
+1. In Colab, choose a CPU runtime.
+2. Put the two dataset files in `data/` inside the Google Drive folder
+   `MyDrive/churn_assignment3/` (the notebook mounts Drive and reads from there).
+3. Install the pinned versions: `pip install -r requirements.txt` (Python 3.13.16).
+4. Open `Telecom_churn_research.ipynb` and run all cells from top to bottom.
+
+The notebook's first cell also installs some packages without version pins.
+These are not replaced once the pinned versions are installed. This has not
+yet been tested in a clean Colab session.
+
+Tuning results are cached in `objects/`. Delete that folder to repeat the
+hyperparameter searches, which took about 287 minutes.
 
 ## Settings
 
